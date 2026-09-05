@@ -1,0 +1,122 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #fffacd;
+  background-image:
+    linear-gradient(#fff 1px, transparent 1px),
+    linear-gradient(90deg, #fff 1px, transparent 1px);
+  background-size: 36px 36px;
+  color: #173b1c;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+button { font: inherit; }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 14px;
+  background: linear-gradient(135deg, #fad246, #ffa500);
+  color: #fff;
+  box-shadow: 0 2px 6px #0002;
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.timeline {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1px 0 24px;
+}
+
+.status {
+  margin: 28px 16px;
+  color: #526455;
+  text-align: center;
+}
+
+.status.error { color: #a52a2a; }
+
+.post {
+  display: flex;
+  gap: 12px;
+  margin: 10px;
+  padding: 14px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.avatar {
+  flex: 0 0 54px;
+  display: flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #a7bcfd;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-body { min-width: 0; flex: 1; }
+.name, .meta, .post-text { margin: 0; }
+.name { font-weight: 700; }
+.meta { color: #666; font-size: 13px; }
+
+.post-text {
+  margin: 8px 0;
+  color: #172019;
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  margin: 10px 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.post-image[hidden] { display: none; }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.actions button {
+  padding: 2px;
+  border: 0;
+  background: none;
+  color: #425845;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform 120ms ease, color 120ms ease;
+}
+
+.actions button:hover { color: #248b35; transform: scale(1.08); }
+.actions button.active { color: #d62963; }
+
+@media (max-width: 480px) {
+  .header { font-size: 34px; }
+  .post { margin: 8px; padding: 12px; }
+}

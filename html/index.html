@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KNTter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="header">KNTter</header>
+  <main id="timeline" class="timeline" aria-live="polite">
+    <p class="status">投稿を読み込んでいます...</p>
+  </main>
+
+  <template id="post-template">
+    <article class="post">
+      <div class="avatar" aria-hidden="true"></div>
+      <div class="post-body">
+        <p class="name"></p>
+        <p class="meta"></p>
+        <p class="post-text"></p>
+        <img class="post-image" alt="" hidden />
+        <div class="actions">
+          <button class="reply" type="button" aria-label="返信">💬 <span></span></button>
+          <button class="repost" type="button" aria-label="リポスト">🔁 <span></span></button>
+          <button class="like" type="button" aria-label="いいね">❤ <span></span></button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
