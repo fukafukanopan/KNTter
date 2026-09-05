@@ -4,7 +4,7 @@
       "name": "食パンよりフランスパン",
       "userId": "@KNTter",
       "time": "1時間",
-      "icon": "🌸",
+      "icon": "🍞",
       "avatarImage": "",
       "text": "これはJSONから読み込んだサンプル投稿です。\n投稿内容は data/posts.json で編集できます。",
       "image": "",
