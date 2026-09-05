@@ -1,6 +1,17 @@
 const timeline = document.querySelector("#timeline");
 const template = document.querySelector("#post-template");
 
+for (const closeButton of document.querySelectorAll(".ad-close")) {
+  closeButton.addEventListener("click", () => {
+    const adColumn = closeButton.closest(".ad-column");
+    adColumn.hidden = true;
+
+    if (adColumn.classList.contains("bottom-ad")) {
+      document.body.classList.remove("has-bottom-ad");
+    }
+  });
+}
+
 function setCount(button, value) {
   button.querySelector("span").textContent = Number(value ?? 0).toLocaleString("ja-JP");
 }
