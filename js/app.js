@@ -40,8 +40,16 @@ function createPost(post) {
     button.setAttribute("aria-pressed", "false");
     button.addEventListener("click", () => {
       const count = button.querySelector("span");
-      const selected = button.classList.toggle("active");
       const current = Number(count.textContent.replaceAll(",", ""));
+
+      if (button.classList.contains("like")) {
+        button.classList.add("active");
+        count.textContent = (current + 38).toLocaleString("ja-JP");
+        button.setAttribute("aria-pressed", "true");
+        return;
+      }
+
+      const selected = button.classList.toggle("active");
       count.textContent = (current + (selected ? 1 : -1)).toLocaleString("ja-JP");
       button.setAttribute("aria-pressed", String(selected));
     });
