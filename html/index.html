@@ -9,11 +9,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body class="has-bottom-ad">
   <header class="header">KNTter</header>
-  <main id="timeline" class="timeline" aria-live="polite">
-    <p class="status">投稿を読み込んでいます...</p>
+  <main class="page-layout">
+    <aside class="ad-column ad-column-left" aria-label="広告">
+      <section class="ad-card">
+        <button class="ad-close" type="button" aria-label="左側の広告を閉じる">×</button>
+        <p class="ad-label">PR</p>
+        <img src="../image/fuurakanato.jpg" alt="風景の広告" />
+        <p class="ad-copy">ひと息つける景色を、あなたの日常に。</p>
+      </section>
+    </aside>
+
+    <section id="timeline" class="timeline" aria-label="投稿一覧" aria-live="polite">
+      <p class="status">投稿を読み込んでいます...</p>
+    </section>
+
+    <aside class="ad-column ad-column-right" aria-label="広告">
+      <section class="ad-card">
+        <button class="ad-close" type="button" aria-label="右側の広告を閉じる">×</button>
+        <p class="ad-label">PR</p>
+        <img src="../image/fuurakanato.jpg" alt="風景の広告" />
+        <p class="ad-copy">ひと息つける景色を、あなたの日常に。</p>
+      </section>
+    </aside>
   </main>
+
+  <aside class="ad-column bottom-ad" aria-label="下部広告">
+    <section class="ad-card bottom-ad-card">
+      <button class="ad-close" type="button" aria-label="下部広告を閉じる">×</button>
+      <p class="ad-label">PR</p>
+      <img src="../image/fuurakanato.jpg" alt="風景の広告" />
+      <p class="ad-copy">ひと息つける景色を、あなたの日常に。</p>
+    </section>
+  </aside>
 
   <template id="post-template">
     <article class="post">
@@ -32,6 +61,6 @@
     </article>
   </template>
 
-  <script src="../js/app.js" defer></script>
+  <script src="../js/app.js?v=2" defer></script>
 </body>
 </html>
